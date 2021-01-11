@@ -1,0 +1,30 @@
+{
+  "name": "insightmaker",
+  "version": "1.0.0",
+  "description": "Package to integrate the Insight Maker API into Javascript projects that use Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guerrato/insightmaker.git"
+  },
+  "keywords": [
+    "insight",
+    "maker",
+    "api",
+    "system",
+    "dynamic",
+    "models"
+  ],
+  "author": {
+    "name": "Pedro Guerrato",
+    "email": "pguerrato@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guerrato/insightmaker/issues"
+  },
+  "homepage": "https://github.com/guerrato/insightmaker#readme"
+}
