@@ -11,11 +11,12 @@
     "url": "git+https://github.com/guerrato/insightmaker.git"
   },
   "keywords": [
+    "insight maker",
     "insight",
     "maker",
     "api",
     "system",
-    "dynamic",
+    "dynamics",
     "models"
   ],
   "author": {
@@ -26,5 +27,10 @@
   "bugs": {
     "url": "https://github.com/guerrato/insightmaker/issues"
   },
-  "homepage": "https://github.com/guerrato/insightmaker#readme"
+  "homepage": "https://github.com/guerrato/insightmaker#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "biginteger": "^1.0.3",
+    "jsdom": "^16.4.0"
+  }
 }
