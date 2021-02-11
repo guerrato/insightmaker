@@ -13,7 +13,7 @@ const loadModelFromFile = async file => {
   })
 }
 
-const loadModel = async model => {
+const loadModel = async fileContent => {
   return new Promise((resolve, reject) => {
     try {
       resolve(api.loadXML(model))
@@ -83,10 +83,10 @@ const getValue = async imPrimitive => {
   })
 }
 
-const getData = async imPrimitive => {
+const getData = async converter => {
   return new Promise((resolve, reject) => {
     try {
-      resolve(api.getData(imPrimitive))
+      resolve(api.getData(converter))
     } catch (err) {
       reject(err)
     }
