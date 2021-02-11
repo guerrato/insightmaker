@@ -23,7 +23,7 @@ const loadModel = async model => {
   })
 }
 
-const execModel = async model => {
+const runModel = async model => {
   return new Promise((resolve, reject) => {
     try {
       resolve(api.runModel({ silent: model }))
@@ -33,8 +33,74 @@ const execModel = async model => {
   })
 }
 
+const findAll = async () => {
+  return new Promise((resolve, reject) => {
+    try {
+      resolve(api.findAll())
+    } catch (err) {
+      reject(err)
+    }
+  })
+}
+
+const getName = async imPrimitive => {
+  return new Promise((resolve, reject) => {
+    try {
+      resolve(api.getName(imPrimitive))
+    } catch (err) {
+      reject(err)
+    }
+  })
+}
+
+const getType = async imPrimitive => {
+  return new Promise((resolve, reject) => {
+    try {
+      resolve(api.getType(imPrimitive))
+    } catch (err) {
+      reject(err)
+    }
+  })
+}
+
+const getId = async imPrimitive => {
+  return new Promise((resolve, reject) => {
+    try {
+      resolve(api.getID(imPrimitive))
+    } catch (err) {
+      reject(err)
+    }
+  })
+}
+
+const getValue = async imPrimitive => {
+  return new Promise((resolve, reject) => {
+    try {
+      resolve(api.getValue(imPrimitive))
+    } catch (err) {
+      reject(err)
+    }
+  })
+}
+
+const getData = async imPrimitive => {
+  return new Promise((resolve, reject) => {
+    try {
+      resolve(api.getData(imPrimitive))
+    } catch (err) {
+      reject(err)
+    }
+  })
+}
+
 module.exports = {
   loadModelFromFile,
   loadModel,
-  execModel
+  runModel,
+  findAll,
+  getName,
+  getType,
+  getId,
+  getValue,
+  getData
 }
