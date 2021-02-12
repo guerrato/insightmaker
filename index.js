@@ -16,7 +16,7 @@ const loadModelFromFile = async file => {
 const loadModel = async fileContent => {
   return new Promise((resolve, reject) => {
     try {
-      resolve(api.loadXML(model))
+      resolve(api.loadXML(fileContent))
     } catch (err) {
       reject(err)
     }
