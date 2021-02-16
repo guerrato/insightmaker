@@ -2,13 +2,26 @@ const api = require('./api')
 
 const loadModelFromFile = async file => {
   return new Promise((resolve, reject) => {
-    let reader = new FileReader()
-    reader.readAsText(file, "UTF-8")
-    reader.onload = async (evt) => {
-      resolve(await loadModel(evt.target.result))
-    }
-    reader.onerror = function (err) {
-      reject(err)
+    if (typeof FileReader === 'undefined') {
+      const fs = require('fs')
+      if (typeof fs === 'undefined') {
+        reject('Error to read the file, try to use the method loadModel passing the file content as parameter')
+      }
+
+      const data = fs.readFileSync(file, 'utf8')
+
+      Promise.all([loadModel(data)]).then(values => {
+        resolve(values[0])
+      })
+    } else {
+      let reader = new FileReader()
+      reader.readAsText(file, "UTF-8")
+      reader.onload = async (evt) => {
+        resolve(await loadModel(evt.target.result))
+      }
+      reader.onerror = function (err) {
+        reject(err)
+      }
     }
   })
 }
