@@ -8,6 +8,8 @@ By installing you will be able to execute the IM models and get the results on y
 ```npm i insightmaker```
 
 ## Basic Examples
+All the API methods are asynchronous.
+
 ### Exemple using a basic Node script
 ```jsx
 const Im = require('insightmaker')
@@ -41,17 +43,18 @@ console.log(results)
 ```
 
 ## Methods
-
 | Name | Params | Type | Description |
 | :------------ |:---------------:| :---------------:| :----- |
 | loadModelFromFile | file | File/string | Loads the exported IM models from file ([Learn more about export IM files](#Exporting-IM-File)) |
 | loadModel | fileContent | string | Loads the exported IM models from file **content** |
 | runModel | model | Object |  |
 | findAll |  |  | Returns all primitives of a specific type. They can be: “Stock”, “Flow”, “Link”, “Text”, “Button”, “Picture”, “Converter”, “Variable” or Array of string. |
+| findID | primitiveId | integer | Returns a primitive by its given ID. |
 | getName | imPrimitive | SimpleNode | Given a primitive, it gets the **name** of the passed primitive. |
 | getType | imPrimitive | SimpleNode | Given a primitive, it gets the **type** of the passed primitive. |
 | getId | imPrimitive | SimpleNode | Given a primitive, it gets the **id** of the passed primitive. |
 | getValue | imPrimitive | SimpleNode | Given a primitive, it gets the **value** of the passed primitive. |
+| setValue | imPrimitive, value | SimpleNode, any | Given a primitive, it sets the primitive **value**. |
 | getData | converter | SimpleNode | Given a converter or an array of Converters, it gets the data of a converter. |
 
 

@@ -56,6 +56,16 @@ const findAll = async () => {
   })
 }
 
+const findID = async primitiveId => {
+  return new Promise((resolve, reject) => {
+    try {
+      resolve(api.findID(primitiveId))
+    } catch (err) {
+      reject(err)
+    }
+  })
+}
+
 const getName = async imPrimitive => {
   return new Promise((resolve, reject) => {
     try {
@@ -96,6 +106,16 @@ const getValue = async imPrimitive => {
   })
 }
 
+const setValue = async (imPrimitive, value) => {
+  return new Promise((resolve, reject) => {
+    try {
+      resolve(api.setValue(imPrimitive, value))
+    } catch (err) {
+      reject(err)
+    }
+  })
+}
+
 const getData = async converter => {
   return new Promise((resolve, reject) => {
     try {
@@ -111,9 +131,11 @@ module.exports = {
   loadModel,
   runModel,
   findAll,
+  findID,
   getName,
   getType,
   getId,
   getValue,
+  setValue,
   getData
 }
