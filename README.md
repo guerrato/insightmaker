@@ -45,17 +45,22 @@ console.log(results)
 ## Methods
 | Name | Params | Type | Description |
 | :------------ |:---------------:| :---------------:| :----- |
+| clearModel | |  | Clean the whole loaded model |
+| createPrimitive | name, type, position, size | integer | Creates a new primitive and adds it to the model. The types can be can be: “Stock”, “Flow”, “Link”, “Text”, “Button”, “Picture”, “Converter”, “Variable” or Array of string. |
+| findAll |  |  | Returns all primitives of a specific type. They can be: “Stock”, “Flow”, “Link”, “Text”, “Button”, “Picture”, “Converter”, “Variable” or Array of string. |
+| findID | primitiveId | integer | Returns a primitive by its given ID. |
+| getData | converter | SimpleNode | Given a converter or an array of Converters, it gets the data of a converter. |
+| getID | imPrimitive | SimpleNode | Given a primitive, it gets the **id** of the passed primitive. |
+| getName | imPrimitive | SimpleNode | Given a primitive, it gets the **name** of the passed primitive. |
+| getType | imPrimitive | SimpleNode | Given a primitive, it gets the **type** of the passed primitive. |
+| getValue | imPrimitive | SimpleNode | Given a primitive, it gets the **value** of the passed primitive. |
 | loadModelFromFile | file | File/string | Loads the exported IM models from file ([Learn more about export IM files](#Exporting-IM-File)) |
 | loadModel | fileContent | string | Loads the exported IM models from file **content** |
 | runModel | model | Object |  |
-| findAll |  |  | Returns all primitives of a specific type. They can be: “Stock”, “Flow”, “Link”, “Text”, “Button”, “Picture”, “Converter”, “Variable” or Array of string. |
-| findID | primitiveId | integer | Returns a primitive by its given ID. |
-| getName | imPrimitive | SimpleNode | Given a primitive, it gets the **name** of the passed primitive. |
-| getType | imPrimitive | SimpleNode | Given a primitive, it gets the **type** of the passed primitive. |
-| getId | imPrimitive | SimpleNode | Given a primitive, it gets the **id** of the passed primitive. |
-| getValue | imPrimitive | SimpleNode | Given a primitive, it gets the **value** of the passed primitive. |
 | setValue | imPrimitive, value | SimpleNode, any | Given a primitive, it sets the primitive **value**. |
-| getData | converter | SimpleNode | Given a converter or an array of Converters, it gets the data of a converter. |
+| setTimeLength | timeLength | integer | Sets the length of the simulation. |
+| setTimeStep | timeStep | string | Sets the time units of the simulation. The units could be: "Seconds", "Minutes", "Days", "Years". |
+| setTimeUnits | units | integer | The time step to be used in the simulation. |
 
 
 ## Exporting IM File

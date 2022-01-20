@@ -4,7 +4,7 @@
   "description": "Package to integrate the Insight Maker API into Javascript projects that use Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
   "devDependencies": {},
   "dependencies": {
     "biginteger": "^1.0.3",
+    "jest": "^27.4.2",
     "jsdom": "^16.4.0",
     "jszip": "^3.5.0",
     "xlsx": "^0.16.9"

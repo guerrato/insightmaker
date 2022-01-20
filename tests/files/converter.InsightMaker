@@ -1,0 +1,34 @@
+<InsightMakerModel>
+  <root>
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    <Setting Note="" Version="37" TimeLength="43" TimeStart="0" TimeStep="1" TimeUnits="Years" Units="" SolutionAlgorithm="RK1" BackgroundColor="white" Throttle="1" Macros="" SensitivityPrimitives="" SensitivityRuns="50" SensitivityBounds="50, 80, 95, 100" SensitivityShowRuns="false" StyleSheet="{}" id="2">
+      <mxCell parent="1" vertex="1" visible="0">
+        <mxGeometry x="20" y="20" width="80" height="40" as="geometry" />
+      </mxCell>
+    </Setting>
+    <Display name="Default Display" Note="" Type="Time Series" xAxis="Time (%u)" yAxis="%o" Primitives=",55,56" AutoAddPrimitives="true" ScatterplotOrder="X Primitive, Y Primitive" Image="Display" yAxis2="" Primitives2="" showMarkers="false" showLines="true" showArea="false" legendPosition="None" id="3">
+      <mxCell style="roundImage;image=/builder/images/DisplayFull.png;" parent="1" vertex="1" visible="0">
+        <mxGeometry x="50" y="20" width="64" height="64" as="geometry" />
+      </mxCell>
+    </Display>
+    <Converter name="Conv" Note="" Source="Time" Data="0,0; 10,100; 20,400; 30,900" Interpolation="Linear" Units="Unitless" MaxConstraintUsed="false" MinConstraintUsed="false" MaxConstraint="100" MinConstraint="0" ShowSlider="false" SliderMax="100" SliderMin="0" SliderStep="" Image="None" FlipHorizontal="false" FlipVertical="false" LabelPosition="Middle" oldId="55" id="55">
+      <mxCell style="converter" vertex="1" parent="1">
+        <mxGeometry x="240" y="80" width="120" height="50" as="geometry" />
+      </mxCell>
+    </Converter>
+    <Variable name="Var" Note="" Equation="[Conv]" Units="Unitless" MaxConstraintUsed="false" MinConstraintUsed="false" MaxConstraint="100" MinConstraint="0" ShowSlider="false" SliderMax="100" SliderMin="0" SliderStep="" Image="None" FlipHorizontal="false" FlipVertical="false" LabelPosition="Middle" oldId="56" id="56">
+      <mxCell style="variable" vertex="1" parent="1">
+        <mxGeometry x="490" y="80" width="120" height="50" as="geometry" />
+      </mxCell>
+    </Variable>
+    <Link name="Link" Note="" BiDirectional="false" oldId="57" id="57">
+      <mxCell style="link" edge="1" parent="1" source="55" target="56">
+        <mxGeometry width="100" height="100" as="geometry">
+          <mxPoint y="100" as="sourcePoint" />
+          <mxPoint x="100" as="targetPoint" />
+        </mxGeometry>
+      </mxCell>
+    </Link>
+  </root>
+</InsightMakerModel>
