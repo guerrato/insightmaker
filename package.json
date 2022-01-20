@@ -1,6 +1,6 @@
 {
   "name": "insightmaker",
-  "version": "1.7.0",
+  "version": "2.0.2",
   "description": "Package to integrate the Insight Maker API into Javascript projects that use Node.js",
   "main": "index.js",
   "scripts": {
